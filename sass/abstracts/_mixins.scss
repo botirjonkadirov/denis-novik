@@ -1,0 +1,27 @@
+@mixin container($kenglik) {
+    width: 100%;
+    max-width: $kenglik;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+.card {
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.6)), url("img.png");
+}
+
+@mixin responsive($breackpoint) {
+    @if $breackpoint == desktop {
+        @media (max-width: 1200px) { @content }
+    };
+    @if $breackpoint == table {
+        @media (max-width: 992px) { @content }
+    };
+    @if $breackpoint == mini-table {
+        @media (max-width: 768px) { @content }
+    };
+    @if $breackpoint == phone {
+        @media (max-width: 576px) { @content }
+    };
+    @if $breackpoint == mini-phone {
+        @media (max-width: 375px) { @content }
+    };
+}

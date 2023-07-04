@@ -1,0 +1,20 @@
+.sitenav {
+    padding-bottom: 3.2rem;
+    border-bottom: 1px solid $gray-color;
+    &__list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item:not(:last-child) {
+        margin-right: 1rem;
+    }
+    &__link {
+        font-weight: 700;
+        color: $gray-color;
+        &:hover {
+            color: $text-color;
+        }
+    }
+}
